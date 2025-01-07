@@ -1,0 +1,12 @@
+
+
+body {
+    background : transparent
+}
+
+
+.spritesheet{
+    animation: moveSpritesheet 4s infinite 
+}
+
+

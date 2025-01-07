@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Définition au survol",
+  "version": "1.0",
+  "description": "Survolez un mot pour voir sa définition.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": ["https://*/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["mergev1.js"]
+    }
+  ],
+"web_accessible_resources": [
+    {
+      "resources": [
+        "img/perso1.PNG",
+        "img/perso2.PNG",
+        "img/perso3.PNG",
+        "img/perso4.PNG"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
